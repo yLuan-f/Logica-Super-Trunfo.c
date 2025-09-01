@@ -2,6 +2,8 @@
 
 int main() {
  
+  int opcao;
+  
   // CARTA 01 
   char Estado01 = 'A';
   char CodigoC01[5] = "A01";
@@ -60,19 +62,87 @@ int main() {
   printf("PIB per Capita: %.2f Reais\n", PIBperCapita02);
 
 
-  //COPARACAO
+  //COMPARACAO
 
-  printf("**** Comparacao de cartas****\n");
+  printf("Compare um dos seguintes atributos: \n");
+  printf("1. Populacao.\n");
+  printf("2. Area.\n");
+  printf("3. PIB.\n");
+  printf("4. Numero de pontos turisticos.\n");
+  printf("5. Densidade Populacional.\n");
+  scanf("%d", &opcao);
 
-  printf("Atributo: Area\n");
-  printf("Carta 1: %.2f\n", Area01);
-  printf("Carta 2: %.2f\n", Area02);
+  switch (opcao)
+  {
+    case 1:
+    printf("Maceio --- Santos\n");
+    printf("* População *\n");
+    printf("%d --- %d \n", Populacao01, Populacao02);
+    if (Populacao01 > Populacao02)
+    {
+      printf("Carta 1 venceu");
+    } else if (Populacao02 > Populacao01) {
+      printf("Carta 2 venceu");
+    } else {
+      printf("Empate!");
+    }
+    break;
+    case 2:
+    printf("Maceio --- Santos\n");
+    printf("* Area *\n");
+    printf("%f --- %f \n", Area01, Area02);
+    if (Area01 > Area02)
+    {
+      printf("Carta 1 venceu");
+    } else if (Area02 > Area01) {
+      printf("Carta 2 venceu");
+    } else {
+      printf("Empate!");
+    }
+    break;
+    case 3:
+    printf("Maceio --- Santos\n");
+    printf("* PIB *\n");
+    printf("%f --- %f \n", PIB01, PIB02);
+    if (PIB01 > PIB02)
+    {
+      printf("Carta 1 venceu");
+    } else if (PIB02 > PIB01) {
+      printf("Carta 2 venceu");
+    } else {
+      printf("Empate!");
+    }
+    break;
+    case 4:
+    printf("Maceio --- Santos\n");
+    printf("* Pontos Turisticos *\n");
+    printf("%d --- %d \n", PontosTuristicos01, PontosTuristicos02);
+    if (PontosTuristicos01 > PontosTuristicos02)
+    {
+      printf("Carta 1 venceu");
+    } else if (PontosTuristicos02 > PontosTuristicos01) {
+      printf("Carta 2 venceu");
+    } else {
+      printf("Empate!");
+    };
+    break;
+    case 5:
+    printf("Maceio --- Santos\n");
+    printf("* Densidade Populacional *\n");
+    printf("%f --- %f \n", DensidadePopulacional01, DensidadePopulacional02);
+    if (DensidadePopulacional01 < DensidadePopulacional02)
+    {
+      printf("Carta 1 venceu");
+    } else if (DensidadePopulacional02 < DensidadePopulacional01) {
+      printf("Carta 2 venceu");
+    } else {
+      printf("Empate!");
+    }
+    break;
+  default:
+      printf("Opcao invalida.");
+    break;
+  }
 
-  if (Area01 > Area02) {
-  printf("A carta 1 venceu!\n");
-  } else {
-  printf("A carta 2 venceu!\n");
-}
   return 0;
-
 }
