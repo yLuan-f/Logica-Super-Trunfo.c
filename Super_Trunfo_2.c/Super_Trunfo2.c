@@ -1,4 +1,8 @@
 #include <stdio.h>
+<<<<<<< HEAD
+=======
+#include <time.h>
+>>>>>>> d345ec5e42dcd6b474d34e56e30bf9df27aba4b4
 #include <stdlib.h>
 
 int main() {
